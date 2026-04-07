@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background-image: url(image/plain.jpg);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-betweem;
+    padding: 20px 30px;
+    border-bottom: 1px solid #ddd;
+
+}
+
+.logo {
+    font-size: 36px;
+    color: #c41230;
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+}
+
+.nav a:hover {
+    color: #c41230;
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 12px 15px;
+    color: #111;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.dropdown-content a:hover {
+    background-color: #f2f2f2;
+    color: #c41230;
+}
+
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* BACK BUTTON */
+.back-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+/* SECTION */
+.collection-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.collection-section h1 {
+    font-size: 36px;
+    color: #222;
+}
+
+.subtitle {
+    margin: 12px 0 40px;
+    color: #666;
+}
+
+/* GRID */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PRODUCT CARD */
+.product-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.info {
+    font-size: 14px;
+    color: #777;
+}
+
+.price {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e91e63;
+}
+
+.btn {
+    padding: 10px;
+    background: #ff6f91;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background: #ff4f7a;
+}
+
+/* POPUP OVERLAY */
+
+.details-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.details-overlay:target {
+    display: flex;
+}
+
+/* POPUP BOX */
+
+.details-box {
+    background: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.details-box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* CLOSE BUTTON */
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.close-btn:hover {
+    color: red;
+}
+  .footer{
+    text-align: center;
+    padding: 20px;
+    background: rgba(77, 77, 77, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    
+}
+
+.footer p{
+    margin: 0;
+}

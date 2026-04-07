@@ -1,0 +1,258 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+  }
+  
+  body {
+    background-image: url(image/genes.jpg);
+    background-size: cover;
+    background-position: scroll;
+    background-repeat: no-repeat;
+  
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-betweem;
+    padding: 20px 30px;
+    border-bottom: 1px solid #ddd;
+    
+  }
+  
+  .logo {
+    font-size: 36px;
+    color: #c41230;
+    font-weight: bold;
+    margin-right: 40px;
+  }
+  
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+  }
+  
+  .nav a:hover {
+    color: #c41230;
+  }
+  
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropbtn {
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+  
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 12px 15px;
+    color: #111;
+    text-decoration: none;
+    font-weight: normal;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f2f2f2;
+    color: #c41230;
+  }
+  
+  
+  .dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  header{
+  text-align:center;
+  margin-bottom:30px;
+  }
+  
+  header h1{
+  font-size:40px;
+  }
+  
+ .section-title{
+  text-align: center;          
+  margin: 40px 0 20px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #111;
+  letter-spacing: 3px;
+  position: relative;
+}
+
+/* DESIGN LINE */
+.section-title::after{
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #c41230;        
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* OPTIONAL HOVER EFFECT */
+.section-title:hover{
+  color: #c41230;
+  transition: 0.3s;
+}
+  
+  .gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:15px;
+  }
+  
+  .gallery img{
+  width:100%;
+  border-radius:6px;
+  cursor:pointer;
+  transition:0.3s;
+  }
+  
+  .gallery img:hover{
+  transform:scale(1.05);
+  }
+  
+  /* ZOOM MODAL */
+  
+  /* ZOOM MODAL (GLASS EFFECT + ANIMATION) */
+
+/* MODAL */
+.modal{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  animation: fadeIn 0.3s ease;
+}
+
+/* SHOW */
+.modal:target{
+  display:flex;
+}
+
+/* FADE */
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+/* CLICK AREA */
+.modal a{
+  position: relative;
+  display: inline-block;
+  animation: zoomIn 0.3s ease;
+}
+
+/* ZOOM */
+@keyframes zoomIn{
+  from{
+    transform: scale(0.8);
+    opacity:0;
+  }
+  to{
+    transform: scale(1);
+    opacity:1;
+  }
+}
+
+/* IMAGE */
+.modal img{
+  max-width:260px;
+  border-radius:12px;
+  display:block;
+}
+
+/* OVERLAY INFO (NASA LOOB NA) */
+.modal-info{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  padding:10px;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+  color:#fff;
+  border-radius:0 0 12px 12px;
+}
+
+/* TEXT */
+.modal-info h3{
+  font-size:14px;
+}
+
+.modal-info p{
+  font-size:12px;
+  opacity:0.9;
+}
+/* CONTENT */
+.modal-content{
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  animation: zoomIn 0.3s ease;
+}
+
+/* CLOSE AREA (BUONG BACKGROUND CLICKABLE) */
+.modal .close{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:1;
+}
+
+
+  .footer{
+    text-align: center;
+    padding: 20px;
+    background: rgba(77, 77, 77, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 200px;
+}
+
+.footer p{
+    margin: 0;
+}
